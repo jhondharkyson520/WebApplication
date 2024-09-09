@@ -1,4 +1,6 @@
 import { Arrow } from "../../assets/icons/arrow";
+import imgDots from '../../assets/Dots.svg';
+import video from '../../assets/video.mp4';
 
 
 function Hero() {
@@ -17,10 +19,10 @@ function Hero() {
 
             <div>
                 <div>
-                    video
+                    <video width="320" height="240" controls="controls" autoplay="autoplay" src={video}/>
                 </div>
                 <div>
-                    points image
+                    <img src={imgDots} alt="" />
                 </div>
             </div>
         </div>
