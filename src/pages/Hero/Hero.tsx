@@ -1,12 +1,13 @@
 import { Arrow } from "../../assets/icons/arrow";
 import imgDots from '../../assets/Dots.svg';
 import video from '../../assets/video.mp4';
+import { HeroContainer, MediaContainer, MoreInformations } from "./Hero.styled";
 
 
 function Hero() {
     return(
-        <div>
-            <div>
+        <HeroContainer>
+            <MoreInformations>
                 <h1>Get more visitors, get more sales.</h1>
 
                 <p>
@@ -14,18 +15,16 @@ function Hero() {
                     Build your next consultancy website within few minutes.
                 </p>
 
-                <a href="#"> Start a free trial </a> <Arrow/>
-            </div>
+                <a href="#"> Start a free trial <Arrow/></a> 
+            </MoreInformations>
 
-            <div>
+            <MediaContainer>
                 <div>
-                    <video width="320" height="240" controls="controls" autoplay="autoplay" src={video}/>
-                </div>
-                <div>
-                    <img src={imgDots} alt="" />
-                </div>
-            </div>
-        </div>
+                    <img src={imgDots} alt="" /> 
+                    <video width="320" height="240"  autoPlay src={video}/>
+                </div>                               
+            </MediaContainer>
+        </HeroContainer>
     );
 };
 

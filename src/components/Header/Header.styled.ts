@@ -8,28 +8,24 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderComponent = styled.header`
-    /* Estilos padrão (mobile) */
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    /* Estilos para tablets (maiores que 480px) */
     @media (min-width: ${breakpoints.mobileMedium}) {
         justify-content: space-between;
         margin-left: 1rem;
         margin-right: 1rem;
     }
 
-    /* Estilos para telas maiores (maiores que 768px) */
     @media (min-width: ${breakpoints.tablet}) {
         justify-content: space-between;
         margin-left: 2rem;
         margin-right: 2rem;
     }
 
-    /* Estilos para desktops grandes (maiores que 1024px) */
     @media (min-width: ${breakpoints.desktop}) {
         justify-content: space-between;
         margin-left: 4rem;
@@ -68,7 +64,6 @@ export const LinksContainer = styled.div`
         }
     }
 
-    /* Estilos para telas maiores (maiores que 768px) */
     @media (min-width: ${breakpoints.tablet}) {
         display: flex;
 
@@ -77,7 +72,6 @@ export const LinksContainer = styled.div`
         }
     }
 
-    /* Estilos para desktops grandes (maiores que 1024px) */
     @media (min-width: ${breakpoints.desktop}) {
         display: flex;
 
