@@ -11,6 +11,7 @@ export const HeroContainer = styled.section`
     flex-direction: column;
     background-color: ${colors.primaryBlue};
     width: 100%;
+    gap: 5rem;
     
 
     /* Estilos para tablets (maiores que 480px) */
@@ -57,15 +58,15 @@ export const MoreInformations = styled.div`
 `;
 
 export const MediaContainer = styled.div`
-    position: inherit;
+    padding-top: 2rem;
     div { 
-        position: absolute;
+        position: relative;
     }
 
     img {
-        position: relative;
+        position: absolute;
         left: 9rem;
-        top: 10rem;
+        bottom: 6rem;
     }
 
     video {
