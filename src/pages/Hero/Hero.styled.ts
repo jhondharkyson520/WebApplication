@@ -4,7 +4,6 @@ import { colors } from "../../styles/colors";
 
 
 export const HeroContainer = styled.section`
-     /* Estilos padrão (mobile) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,22 +11,19 @@ export const HeroContainer = styled.section`
     background-color: ${colors.primaryBlue};
     width: 100%;
     gap: 5rem;
-    
+    padding-bottom: 3rem;
 
-    /* Estilos para tablets (maiores que 480px) */
     @media (min-width: ${breakpoints.mobileMedium}) {
         flex-direction: row;
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    /* Estilos para telas maiores (maiores que 768px) */
     @media (min-width: ${breakpoints.tablet}) {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    /* Estilos para desktops grandes (maiores que 1024px) */
     @media (min-width: ${breakpoints.desktop}) {
         padding-left: 4rem;
         padding-right: 4rem;
@@ -37,12 +33,18 @@ export const HeroContainer = styled.section`
 export const MoreInformations = styled.div`    
     display: flex;
     flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
 
     h1 {
-        font-size: 60px;
+        font-size: 40px;
         font-weight: bold;
         color: ${colors.white};
+
+        @media(min-width: ${breakpoints.mobileMedium}){
+            font-size: 60px;
+        }
     }
 
     p {
@@ -54,13 +56,24 @@ export const MoreInformations = styled.div`
         color: ${colors.green};
         font-size: 21px;
         font-weight: bold;
+
+        &:hover{
+            color: ${colors.greenSecondary};
+            svg path{
+                stroke: ${colors.greenSecondary}
+            }
+        }
     }
 `;
 
 export const MediaContainer = styled.div`
     padding-top: 2rem;
+    padding-right: 2rem;
     div { 
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     img {
@@ -73,5 +86,9 @@ export const MediaContainer = styled.div`
         position: relative;
         object-fit: cover;
         border-radius: 10px;
+    }
+
+    button {
+        position: absolute;
     }
 `;
